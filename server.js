@@ -29,7 +29,7 @@ io.on('connection', socket => {
   });
 
   socket.on('answer', payload => {
-    io.to(payload.target).emit('offer', payload);
+    io.to(payload.target).emit('answer', payload);
   });
 
   socket.on('ice-candidate', incoming => {
